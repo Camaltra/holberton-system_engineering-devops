@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "%s\n" {a..z}{a..z} | sed 's/oo//g' | sed '/^$/d' 
+printf "%s\n" {a..z}{a..z} | awk '{gsub("oo", "");print}' | grep . 
