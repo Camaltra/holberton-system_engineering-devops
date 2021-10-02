@@ -16,4 +16,4 @@ Contain some basics commands to search a lot of thing on file, or on documentary
 
 ## 0x03-shell_variables_expensions
 
-Some exemple to use variables, see how to create local or global variable. Discovers all env variables. Creating more scripts
+Some exemples that show how to use variables, see how to create local or global variable. Discovers all env variables. Creating more scripts
