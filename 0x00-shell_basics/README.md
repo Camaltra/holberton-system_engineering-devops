@@ -1,6 +1,6 @@
 # Introduction to the basic commands in shell
 
-## Basic exercices
+## Basics exercices
 
 ### 0-current_working_directory
 Prints the absolute path name of the current working directory.
