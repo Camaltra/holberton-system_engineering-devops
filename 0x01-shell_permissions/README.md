@@ -1,6 +1,6 @@
-# Introduction to the shell permissions and groupe 
+# Introduction to the shell permissions and group 
 
-## Basics exercices
+## Basic exercices
 
 ### 0-current_working_directory
 Prints the absolute path name of the current working directory.
@@ -46,6 +46,8 @@ Create a symbolic link in the current working directory, link to /bin/ls.
 
 ### 14-copy_html
 Copy all html files from the current irectory to the parent of the working directory, but only copy files that did not exist in the parent of the working directory or were newer than the versions in the parent of the working directory.
+
+## Advence exercices
 
 ### 100-lets_move
 Moves all files beginning with an uppercase lettrer toa given directory.
