@@ -47,7 +47,7 @@ Create a symbolic link in the current working directory, link to /bin/ls.
 ### 14-copy_html
 Copy all html files from the current irectory to the parent of the working directory, but only copy files that did not exist in the parent of the working directory or were newer than the versions in the parent of the working directory.
 
-## Advence exercices
+## Advenced exercices
 
 ### 100-lets_move
 Moves all files beginning with an uppercase lettrer toa given directory.
