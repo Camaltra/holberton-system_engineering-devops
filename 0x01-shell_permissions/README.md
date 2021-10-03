@@ -1,4 +1,4 @@
-# Introduction to the shell permissions and group 
+# Introduction to the shell permissions and groups
 
 ## Basic exercices
 
