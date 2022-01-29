@@ -2,7 +2,7 @@
 
 <h3 align="center">Made on Ubuntu 20.04</h3>
 
-<h3 align="center">Objectiv learned</h3>
+<h3>Objectiv learned</h3>
 
 <p>
 What is the shell<br/>
