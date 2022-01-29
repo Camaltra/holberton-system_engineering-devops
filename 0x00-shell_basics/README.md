@@ -4,7 +4,7 @@
 
 <h3 align="center">Objectiv learned</h3>
 
-<p align="center">
+<p>
 What is the shell<br/>
 What is the difference between a terminal and a shell<br/>
 What is the shell prompt<br/>

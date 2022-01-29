@@ -4,7 +4,7 @@
 
 <h3 align="center">Objectiv learned</h3>
 
-<p align="center">
+<p>
 What do the commands head, tail, find, wc, sort, uniq, grep, tr do<br/>
 How to redirect standard output to a file<br/>
 How to get standard input from a file instead of the keyboard<br/>

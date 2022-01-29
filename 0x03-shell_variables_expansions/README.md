@@ -4,7 +4,7 @@
 
 <h3 align="center">Objectiv learned</h3>
 
-<p align="center">
+<p>
 What happens when you type $ ls -l *.txt<br/>
 What are the /etc/profile file and the /etc/profile.d directory<br/>
 What is the ~/.bashrc file<br/>
