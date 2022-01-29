@@ -1,65 +1,42 @@
-# Introduction to the basic commands in shell
+<h1 align="center">0x00-shell_basics</h1>
 
-## Basic exercices
+<h3 align="center">Made on Ubuntu 20.04</h3>
 
-### 0-current_working_directory
-Prints the absolute path name of the current working directory.
+<h3 align="center">Objectiv learned</h3>
 
-### 1-listit
-Display the contents list of your current directory.
-
-### 2-bring_me_home
-Changes the working directory to the user’s home directory.
-
-### 3-listfiles
-Display current directory contents in a long format.
-
-### 4-listmorefiles
-Display current directory contents, including hidden files, using the long format.
-
-### 5-listfilesdigitonly
-Display current directory contents, using long format, with all hidden files with user and group IDs displayed.
-
-### 6-firstdirectory
-Create a directory named my_first_directory in /tmp directory.
-
-### 7-movethatfile
-Move a file into the new directory (my_first_diretory).
-
-### 8-firstdelete
-Delete the new file.
-
-### 9-firstdirdeletion
-Delete the new directory.
-
-### 10-back
-Changes the working directory to the previous one.
-
-### 11-lists
-List all files, even the hidden, on the current directory, parents working directory and the /boot directory, in long format.
-
-### 12-file_type 
-Print a type of a given file.
-
-### 13-symbolic_link
-Create a symbolic link in the current working directory, link to /bin/ls.
-
-### 14-copy_html
-Copy all html files from the current irectory to the parent of the working directory, but only copy files that did not exist in the parent of the working directory or were newer than the versions in the parent of the working directory.
-
-## Advanced exercices 
-
-### 100-lets_move
-Moves all files beginning with an uppercase lettrer toa given directory.
-
-### 101-clean_emacs
-Delete all files in the current directory that end with ~.
-
-### 102-tree
-Create the directories /welcome/to/school/ in one line command.
-
-### 103-commas 
-Print all directory of the current working directory in line with / at the end and separate by commas.
-
-### school.mgc
-A magic file that detect School data files.
+<p align="center">
+What is the shell<br/>
+What is the difference between a terminal and a shell<br/>
+What is the shell prompt<br/>
+How to use the history (the basics)<br/>
+What do the commands or built-ins cd, pwd, ls do<br/>
+How to navigate the filesystem<br/>
+What are the . and .. directories<br/>
+What is the working directory, how to print it and how to change it<br/>
+What is the root directory<br/>
+What is the home directory, and how to go there<br/>
+What is the difference between the root directory and the home directory of the user root<br/>
+What are the characteristics of hidden files and how to list them<br/>
+What does the command cd - do<br/>
+What do the commands ls, less, file do<br/>
+How do you use options and arguments with commands<br/>
+Understand the ls long format and how to display it<br/>
+A Guided Tour<br/>
+What does the ln command do<br/>
+What do you find in the most common/important directories<br/>
+What is a symbolic link<br/>
+What is a hard link<br/>
+What is the difference between a hard link and a symbolic link<br/>
+What do the commands cp, mv, rm, mkdir do<br/>
+What are wildcards and how do they work<br/>
+How to use wildcards<br/>
+What do type, which, help, man commands do<br/>
+What are the different kinds of commands<br/>
+What is an alias<br/>
+When do you use the command help instead of man<br/>
+How to read a man page<br/>
+What are man page sections<br/>
+What are the section numbers for User commands, System calls and Library functions<br/>
+Common shortcuts for Bash<br/>
+What does LTS mean?
+</p>

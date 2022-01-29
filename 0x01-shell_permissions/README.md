@@ -1,65 +1,20 @@
-# Introduction to the shell permissions and groups
+<h1 align="center">0x01-shell_permissions</h1>
 
-## Basic exercices
+<h3 align="center">Made on Ubuntu 20.04</h3>
 
-### 0-current_working_directory
-Prints the absolute path name of the current working directory.
+<h3 align="center">Objectiv learned</h3>
 
-### 1-listit
-Display the contents list of your current directory.
-
-### 2-bring_me_home
-Changes the working directory to the user’s home directory.
-
-### 3-listfiles
-Display current directory contents in a long format.
-
-### 4-listmorefiles
-Display current directory contents, including hidden files, using the long format.
-
-### 5-listfilesdigitonly
-Display current directory contents, using long format, with all hidden files with user and group IDs displayed.
-
-### 6-firstdirectory
-Create a directory named my_first_directory in /tmp directory.
-
-### 7-movethatfile
-Move a file into the new directory (my_first_diretory).
-
-### 8-firstdelete
-Delete the new file.
-
-### 9-firstdirdeletion
-Delete the new directory.
-
-### 10-back
-Changes the working directory to the previous one.
-
-### 11-lists
-List all files, even the hidden, on the current directory, parents working directory and the /boot directory, in long format.
-
-### 12-file_type 
-Print a type of a given file.
-
-### 13-symbolic_link
-Create a symbolic link in the current working directory, link to /bin/ls.
-
-### 14-copy_html
-Copy all html files from the current irectory to the parent of the working directory, but only copy files that did not exist in the parent of the working directory or were newer than the versions in the parent of the working directory.
-
-## Advenced exercices
-
-### 100-lets_move
-Moves all files beginning with an uppercase lettrer toa given directory.
-
-### 101-clean_emacs
-Delete all files in the current directory that end with ~.
-
-### 102-tree
-Create the directories /welcome/to/school/ in one line command.
-
-### 103-commas 
-Print all directory of the current working directory in line with / at the end and separate by commas.
-
-### school.mgc
-A magic file that detect School data files.
+<p align="center">
+What do the commands chmod, sudo, su, chown, chgrp do<br/>
+Linux file permissions<br/>
+How to represent each of the three sets of permissions (owner, group, and other) as a single digit<br/>
+How to change permissions, owner and group of a file<br/>
+Why can’t a normal user chown a file<br/>
+How to run a command with root privileges<br/>
+How to change user ID or become superuser<br/>
+How to create a user<br/>
+How to create a group<br/>
+How to print real and effective user and group IDs<br/>
+How to print the groups a user is in<br/>
+How to print the effective userid<br/>
+</p>
