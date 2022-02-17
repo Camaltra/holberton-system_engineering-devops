@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+#Creating a Clock
+minutes=1
+hours=0
+while [ "$hours" -ne 13 ]
+do
+    echo "$minutes"
+    if [ "$minutes" -eq 59 ]
+    then
+        ((hours++))
+        if [ "$hours" -eq 13 ]
+        then
+            break
+        fi
+        echo Hour: "$hours"
+        minutes=0
+    fi
+    ((minutes++))
+done

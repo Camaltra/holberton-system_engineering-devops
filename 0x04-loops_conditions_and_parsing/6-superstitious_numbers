@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+#Try some code in while loop and case statement
+n=1
+while [ "$n" -lt 21 ]
+do
+    case "$n" in
+    4)
+        echo "$n"
+        echo "bad luck from China"
+        ;;
+    9)
+        echo "$n"
+        echo "bad luck from Japan"
+        ;;
+    17)
+        echo "$n"
+        echo "bad luck from Italy"
+        ;;
+    *)
+        echo "$n"
+    esac
+    ((n++))
+done
