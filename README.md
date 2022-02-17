@@ -17,3 +17,7 @@ Contain some basics commands to search a lot of thing on file, or on documentary
 <h2><a href="https://github.com/Camaltra/holberton-system_engineering-devops/tree/master/0x03-shell_variables_expansions">0x03-shell_variables_expensions</a></h2>
 
 Some exemples that show how to use variables, see how to create locals or globals variables. Discovers all env variables. Creating more scripts.
+
+<h2><a href="https://github.com/Camaltra/holberton-system_engineering-devops/tree/master/0x04-loops_conditions_and_parsing">0x04-loops_conditions_and_parsing</a></h2>
+
+Quick overview of loops and statement in bash language, introduction to log parsing.
