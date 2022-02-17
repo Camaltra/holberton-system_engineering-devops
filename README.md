@@ -20,4 +20,4 @@ Some exemples that show how to use variables, see how to create locals or global
 
 <h2><a href="https://github.com/Camaltra/holberton-system_engineering-devops/tree/master/0x04-loops_conditions_and_parsing">0x04-loops_conditions_and_parsing</a></h2>
 
-Quick overview of loops and statement in bash language, introduction to log parsing.
+Quick overview of loops and statements in bash language, introduction to log parsing.
