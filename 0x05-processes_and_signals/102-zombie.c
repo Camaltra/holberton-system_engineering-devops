@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 /**
 * infinite_while - Infinite loop
@@ -28,12 +29,12 @@ int main(void)
 
 	for (i = 0; i < 5; i++)
 	{
-		zombies = fock();
+		zombies = fork();
 		if (zombies == 0)
 			return (0);
-		printf("Zombie process created, PID: %d", zombies)
+		printf("Zombie process created, PID: %d", zombies);
 	}
 
-	infinite_while()
-	return(1)
+	infinite_while();
+	return(1);
 }
