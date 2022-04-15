@@ -1,6 +1,6 @@
 #Install the puppet-link package
 
-package { 'puppet-lint':
-    ensure   => '2.5.0',
-    provider => 'gem'
+exec { 'Install puppet-lint':
+    command => 'sudo gem intall puppet-lint -v 2.5.0',
+    path    => ['/usr/bin'],
 }
