@@ -1,10 +1,12 @@
 #Create the good ssh config thank to puppet
 #(Need the same result as the last task)
 
-exec {sed -i "s/#   PasswordAuthentication yes/    PasswordAuthentication no/" /etc/ssh/ssh_config:
-    path => '/usr/bin',
+file_line {'Add PasswordAuthentication no':
+    path => '/etc/ssh/ssh_config',
+    line => '    PasswordAuthentication no'
 }
 
-exec {sed -i "s/#   IdentityFile\s~\/.ssh\/id_rsa/    IdentityFile ~\/.ssh\/school/" /etc/ssh/ssh_config:
-    path => '/usr/bin',
+file_line {'Add IdentityFile with the right key':
+    path => '/etc/ssh/ssh_config',
+    line => '    IdentityFile ~/.ssh/school'
 }
