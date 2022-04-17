@@ -5,6 +5,6 @@ exec {sed -i "s/#   PasswordAuthentication yes/    PasswordAuthentication no/" /
     path => '/usr/bin',
 }
 
-exec {sed -i "s/#   IdentityFile\s~/.ssh/id_rsa/    IdentityFile ~/.ssh/school/" /etc/ssh/ssh_config:
+exec {sed -i "s/#   IdentityFile\s~\/.ssh\/id_rsa/    IdentityFile ~\/.ssh\/school/" /etc/ssh/ssh_config:
     path => '/usr/bin',
 }
