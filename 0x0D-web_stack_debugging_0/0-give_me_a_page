@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 #Start a web server
 
 serice apache2 start
