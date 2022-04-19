@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#Install nginx and change the first html page
+
+apt update -y
+apt install nginx -y
+echo "Hello World!" > /var/www/html/index.nginx-debian.html
+service nginx restart

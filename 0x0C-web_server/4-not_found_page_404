@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#Install nginx and change the first html page and 404|redirectme page
+
+apt update -y
+apt install nginx -y
+echo "Hello World!" > /var/www/html/index.nginx-debian.html
+echo "Ceci n'est pas une page" > /var/www/html/404.html
+sed -i '/listen \[::\]:80 default_server;/a\\trewrite ^\/redirect_me https://www.youtube.com/watch?v=dQw4w9WgXcQ permanent;\n\n\terror_page 404 \/404.html;' /etc/nginx/sites-available/default
+service nginx restart
