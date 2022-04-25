@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 #Install a proxy on the load balancer
-
-apt update -y
-apt install haproxy -y
+apt-get update -y
+apt-get install haproxy -y
 
 echo "frontend http
         bind *:80
