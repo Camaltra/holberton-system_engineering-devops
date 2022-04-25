@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 #Add a component into the header
 
-apt update -y
-apt install nginx -y
-sed -i "/listen \[::\]:80 default_server;/a \\\n\tadd_header X-Served-By \"$(hostname)\";" /etc/nginx/sites-available/default
+apt-get update
+apt-get install -y nginx
+HOSTNAME=$(cat /etc/hostname)
+sed -i "/listen \[::\]:80 default_server;/a \\\n\tadd_header X-Served-By \"$HOSTNAME\";" /etc/nginx/sites-enabled/default
 service nginx restart
