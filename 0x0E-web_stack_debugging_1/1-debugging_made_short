@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Debug the server to make it work on the port 80 but on a shorter way
 
-ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-service nginx start
-kill "$(pgrep 'nginx' | head -1)"
+cp /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+service nginx restart
+pkill -o nginx
