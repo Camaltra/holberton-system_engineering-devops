@@ -5,6 +5,7 @@ Gather data from an API and save it to csv file
 """
 
 import csv
+import json
 import requests
 from sys import argv
 
