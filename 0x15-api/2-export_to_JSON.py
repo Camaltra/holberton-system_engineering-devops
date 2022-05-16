@@ -1,33 +1,29 @@
 #!/usr/bin/python3
+
+"""
+Gather data from an API and save it to csv file
+"""
+
+import csv
 import json
 import requests
-import sys
+from sys import argv
 
+
+API_URL = "https://jsonplaceholder.typicode.com"
 
 if __name__ == "__main__":
-    userRequest = requests.get(
-        "https://jsonplaceholder.typicode.com/users/{}".format(
-            sys.argv[1]
-        )
-    )
-    userName = userRequest.json()["username"]
-    userId = userRequest.json()["id"]
-    response = requests.get(
-        "https://jsonplaceholder.typicode.com/users/{}/todos".format(
-            sys.argv[1]
-        )
-    )
-    jsonResponse = response.json()
-
-    userDict = {userId: []}
-
-    for idx in jsonResponse:
-        userDict[userId].append({
-            "task": idx["title"],
-            "completed": idx["completed"],
-            "username": userName,
-        })
-
-    file = '{}.json'.format(userId)
-    with open(file, 'w') as fd:
-        json.dump(userDict, fd)
+    userInfo = requests.get("{}/users/{}".format(API_URL, argv[1])).json()
+    taskToDo = requests.get("{}/todos?userId={}".
+                            format(API_URL, argv[1])).json()
+    taskList = []
+    for task in taskToDo:
+        dictTask = {}
+        dictTask["task"] = task["title"]
+        dictTask["completed"] = task["completed"]
+        dictTask["username"] = userInfo["username"]
+        taskList.append(dictTask)
+    objJson = {}
+    objJson[str(argv[1])] = taskList
+    with open("{}.json".format(argv[1]), 'w') as jsonfile:
+        json.dump(objJson, jsonfile)
