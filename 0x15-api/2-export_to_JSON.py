@@ -4,10 +4,9 @@
 Gather data from an API and save it to csv file
 """
 
-from sys import argv
-import requests
-import json
 import csv
+import requests
+from sys import argv
 
 
 API_URL = "https://jsonplaceholder.typicode.com"
@@ -21,7 +20,7 @@ if __name__ == "__main__":
         dictTask = {}
         dictTask["task"] = task["title"]
         dictTask["completed"] = task["completed"]
-        dictTask["username"] = userInfo["name"]
+        dictTask["username"] = userInfo["username"]
         taskList.append(dictTask)
     objJson = {}
     objJson[str(argv[1])] = taskList

@@ -4,10 +4,9 @@
 Gather data from an API and save it to csv file
 """
 
-from sys import argv
-import requests
-import json
 import csv
+import requests
+from sys import argv
 
 
 API_URL = "https://jsonplaceholder.typicode.com"
