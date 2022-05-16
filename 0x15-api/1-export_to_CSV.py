@@ -19,7 +19,7 @@ if __name__ == "__main__":
     with open('{}.csv'.format(argv[1]), 'w', encoding='UTF8') as f:
         writer = csv.writer(f, quoting=csv.QUOTE_ALL)
         for task in taskToDo:
-            writer.writerow(['{}'.format(argv[1]),
-                             userInfo['name'],
+            writer.writerow(['{}'.format(int(argv[1])),
+                             userInfo['username'],
                              task['completed'],
                              task['title']])
