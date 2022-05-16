@@ -1,25 +1,36 @@
 #!/usr/bin/python3
-
-"""
-Gather data from an API
-"""
-
+"""0. Gather data from an API
+api fetch"""
 import requests
-from sys import argv
-
-
-API_URL = "https://jsonplaceholder.typicode.com"
+import sys
 
 if __name__ == "__main__":
-    userInfo = requests.get("{}/users/{}".format(API_URL, argv[1])).json()
-    taskToDo = requests.get("{}/todos?userId={}".
-                            format(API_URL, argv[1])).json()
-    completedTask = []
-    for task in taskToDo:
-        if task["completed"]:
-            completedTask.append(task['title'])
+    userNameRequest = requests.get(
+        "https://jsonplaceholder.typicode.com/users/{}".format(sys.argv[1])
+    )
+    userName = userNameRequest.json()["name"]
+    response = requests.get(
+        "https://jsonplaceholder.typicode.com/users/{}/todos".format(
+            sys.argv[1]
+        )
+    )
+    json = response.json()
 
-    print("Employee {} is done with tasks({}/{}):".
-          format(userInfo['name'], len(completedTask), len(taskToDo)))
+    i = 0
+    todoList = []
+    did = 0
+    total = 0
 
-    print("\n".join("\t {}".format(task) for task in completedTask))
+    for idx in json:
+        if idx["completed"]:
+            todoList.append(idx["title"])
+            did += 1
+        total += 1
+
+    print("Employee {} is done with tasks({}/{}):".format(
+        userName,
+        did,
+        total
+    ))
+    for idx in todoList:
+        print("\t " + idx)
