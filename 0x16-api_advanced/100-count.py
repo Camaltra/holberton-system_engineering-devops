@@ -24,7 +24,7 @@ def count_words(subreddit, word_list, dictWord={}, after=None):
     response = requests.get(
         URL,
         headers=headers,
-        params={'after': after, 'limit': 100}
+        params={'after': after, 'limit': 10}
     )
     if response.status_code == 404:
         return
@@ -35,10 +35,10 @@ def count_words(subreddit, word_list, dictWord={}, after=None):
         title = hotPost.get("data", {}).get("title", "").lower().split()
         for word in word_list:
             if word.lower() in title:
-                if word not in dictWord.keys():
-                    dictWord[word] = 1
+                if word.lower() not in dictWord.keys():
+                    dictWord[word.lower()] = 1
                 else:
-                    dictWord[word] += 1
+                    dictWord[word.lower()] += 1
     if after is None:
         if len(dictWord) == 0:
             pass
