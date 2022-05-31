@@ -16,7 +16,7 @@ def count_words(subreddit, word_list, dictWord={}, after=None):
     """
     if subreddit is None:
         print(None)
-    URL = f'http://www.reddit.com/r/{subreddit}/hot.json'
+    URL = 'http://www.reddit.com/r/{}/hot.json'.format(subreddit)
     headers = {
         'User-Agent': 'Holberton User Agent 1.0',
         'From': 'mickael.boillaud@gmail.com',
@@ -46,6 +46,6 @@ def count_words(subreddit, word_list, dictWord={}, after=None):
         else:
             dictWord = sorted(dictWord.items(), key=lambda kv: (-kv[1], kv[0]))
             for key, value in dictWord:
-                print(f'{key}: {value}')
+                print('{}: {}'.format(key, value))
         return
     return count_words(subreddit, word_list, dictWord, after)
