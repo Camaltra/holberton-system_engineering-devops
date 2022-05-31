@@ -34,8 +34,8 @@ def count_words(subreddit, word_list, dictWord={}, after=None):
     after = data.get("data", {}).get("after", None)
     for hotPost in allHot:
         title = hotPost.get("data", {}).get("title", "").lower().split()
-        for word in word_list.lower().split():
-            if word in title:
+        for word in word_list:
+            if word.lower() in title:
                 if word not in dictWord.keys():
                     dictWord[word] = 1
                 else:
