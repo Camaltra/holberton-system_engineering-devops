@@ -14,7 +14,11 @@ def top_ten(subreddit):
         'User-Agent': 'Holberton User Agent 1.0',
         'From': 'mickael.boillaud@gmail.com',
     }
-    data = requests.get(URL, headers=headers, params={'limit': 10}).json()
+    response = requests.get(URL, headers=headers, params={'limit': 10})
+    if response.status_code == 404:
+        print(None)
+        return
+    data = response.json()
     allHot = data.get("data", {}).get("children", None)
     if allHot is None or len(allHot) <= 0 or allHot[0].get('kind') != 't3':
         print(None)

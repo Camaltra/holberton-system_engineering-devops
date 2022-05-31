@@ -3,7 +3,7 @@
 import requests
 
 
-def recurse(subreddit, hot_list=[], after=None):
+def count_words(subreddit, word_list, dictWord={}, after=None):
     """
     Recursive function that queries the Reddit API and returns
     a list containing the titles of all hot articles for a given
@@ -23,18 +23,25 @@ def recurse(subreddit, hot_list=[], after=None):
         params={'after': after, 'limit': 100}
     )
     if response.status_code == 404:
-        return None
+        print("")
+        return
     data = response.json()
     allHot = data.get("data", {}).get("children", None)
     after = data.get("data", {}).get("after", None)
-    if allHot is None or len(allHot) <= 0 or allHot[0].get('kind') != 't3':
-        if len(hot_list) > 0:
-            return hot_list
-        return None
-    for title in allHot:
-        hot_list.append(title.get("data", {}).get("title", ""))
+    for hotPost in allHot:
+        title = hotPost.get("data", {}).get("title", "").lower().split()
+        for word in word_list.lower().split():
+            if word in title:
+                if word not in dictWord.keys():
+                    dictWord[word] = 1
+                else:
+                    dictWord[word] += 1
     if after is None:
-        if len(hot_list) > 0:
-            return hot_list
-        return None
-    return recurse(subreddit, hot_list, after)
+        if len(dictWord) == 0:
+            print("")
+        else:
+            dictWord = sorted(dictWord.items(), key=lambda kv: (-kv[1], kv[0]))
+            for key, value in dictWord:
+                print(f'{key}: {value}')
+        return
+    return count_words(subreddit, word_list, dictWord, after)
