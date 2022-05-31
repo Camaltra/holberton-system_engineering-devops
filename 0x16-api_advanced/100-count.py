@@ -27,7 +27,6 @@ def count_words(subreddit, word_list, dictWord={}, after=None):
         params={'after': after, 'limit': 100}
     )
     if response.status_code == 404:
-        print("")
         return
     data = response.json()
     allHot = data.get("data", {}).get("children", None)
@@ -42,7 +41,7 @@ def count_words(subreddit, word_list, dictWord={}, after=None):
                     dictWord[word] += 1
     if after is None:
         if len(dictWord) == 0:
-            print("")
+            pass
         else:
             dictWord = sorted(dictWord.items(), key=lambda kv: (-kv[1], kv[0]))
             for key, value in dictWord:
