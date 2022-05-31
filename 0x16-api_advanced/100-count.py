@@ -35,10 +35,14 @@ def count_words(subreddit, word_list, dictWord={}, after=None):
         title = hotPost.get("data", {}).get("title", "").lower().split()
         for word in word_list:
             if word.lower() in title:
+                totalIteration = 0
+                for w in title:
+                    if word.lower() == w:
+                        totalIteration += 1
                 if word.lower() not in dictWord.keys():
-                    dictWord[word.lower()] = 1
+                    dictWord[word.lower()] = totalIteration
                 else:
-                    dictWord[word.lower()] += 1
+                    dictWord[word.lower()] += totalIteration
     if after is None:
         if len(dictWord) == 0:
             pass
