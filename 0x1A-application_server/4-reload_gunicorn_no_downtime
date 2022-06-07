@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#Restart the Gunicorn in a graceful way
+ps aux |grep gunicorn |grep projectname | awk '{ print $2 }' |xargs kill -HUP
